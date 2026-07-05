@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Software Development Team</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🤖 AI Software Development Team</h1>
+
+<div class="card">
+<h2>📋 Project Requirement</h2>
+<p>{{ requirement }}</p>
+</div>
+
+<div class="card">
+<h2>1️⃣ Requirement Analyst</h2>
+
+<h3>Functional Requirements</h3>
+<ul>
+{% for item in requirement_data["Functional Requirements"] %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+<h3>Non Functional Requirements</h3>
+<ul>
+{% for item in requirement_data["Non Functional Requirements"] %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="card">
+<h2>2️⃣ Project Manager</h2>
+
+<p><b>Timeline:</b> {{ project_data["Timeline"] }}</p>
+
+<ul>
+{% for item in project_data["Modules"] %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="card">
+<h2>3️⃣ Developer</h2>
+
+<p><b>Frontend:</b> {{ developer_data["Frontend"]|join(", ") }}</p>
+<p><b>Backend:</b> {{ developer_data["Backend"]|join(", ") }}</p>
+<p><b>Database:</b> {{ developer_data["Database"]|join(", ") }}</p>
+
+</div>
+
+<div class="card">
+<h2>4️⃣ QA Tester</h2>
+
+<ul>
+{% for item in tester_data["Test Cases"] %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>5️⃣ Documentation Agent</h2>
+
+<ul>
+{% for item in documentation_data["Documents"] %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+<a href="/" class="btn">⬅ Analyze Another Project</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Software Development Team</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+<div class="row justify-content-center">
+
+<div class="col-md-8">
+
+<div class="card shadow-lg p-5">
+
+<h1 class="text-center text-primary mb-4">
+🤖 AI Software Development Team
+</h1>
+
+<p class="text-center text-muted">
+Enter your software project requirement below.
+</p>
+
+<form action="/analyze" method="POST">
+
+<div class="mb-3">
+
+<label class="form-label">
+Project Requirement
+</label>
+
+<textarea
+class="form-control"
+rows="6"
+name="requirement"
+placeholder="Example: Build a Student Management System"
+required></textarea>
+
+</div>
+
+<div class="d-grid">
+
+<button type="submit" class="btn btn-primary btn-lg">
+🚀 Analyze Requirement
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
